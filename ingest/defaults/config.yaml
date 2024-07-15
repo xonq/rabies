@@ -4,11 +4,8 @@
 # Define optional config parameters with their default values here so that users
 # do not have to dig through the workflows to figure out the default values
 
-# Required to fetch from Entrez
-entrez_search_term: ""
-
 # Required to fetch from NCBI Datasets
-ncbi_taxon_id: ""
+ncbi_taxon_id: "11292"
 
 # The list of NCBI Datasets fields to include from NCBI Datasets output
 # These need to be the "mnemonics" of the NCBI Datasets fields, see docs for full list of fields
@@ -66,7 +63,7 @@ curate:
   # Currently accepts any characters because we do not have a clear standard for strain names across pathogens
   strain_regex: "^.+$"
   # Back up strain name field to use if "strain" doesn"t match regex above
-  strain_backup_fields: ["accession"]
+  strain_backup_fields: []
   # List of date fields to standardize to ISO format YYYY-MM-DD
   date_fields: ["date", "date_released", "date_updated"]
   # List of expected date formats that are present in the date fields provided above
