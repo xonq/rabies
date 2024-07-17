@@ -8,3 +8,5 @@ filter:
     sequences_per_group: 20
     min_date: 1950
     min_length: 5000
+ancestral:
+    inference: "joint"
