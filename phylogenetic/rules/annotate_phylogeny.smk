@@ -12,6 +12,10 @@ rule ancestral:
         alignment = "results/aligned.fasta"
     output:
         node_data = "results/nt_muts.json"
+    log:
+        "logs/ancestral.txt",
+    benchmark:
+        "benchmarks/ancestral.txt"
     params:
         inference = config["ancestral"]["inference"],
         reference = config["files"]["reference"]
@@ -22,7 +26,8 @@ rule ancestral:
             --alignment {input.alignment} \
             --output-node-data {output.node_data} \
             --inference {params.inference} \
-            --root-sequence {params.reference}
+            --root-sequence {params.reference} \
+            2>&1 | tee {log}
         """
 
 rule translate:
@@ -33,11 +38,16 @@ rule translate:
         reference = config["files"]["reference"]
     output:
         node_data = "results/aa_muts.json"
+    log:
+        "logs/translate.txt",
+    benchmark:
+        "benchmarks/translate.txt"
     shell:
         """
         augur translate \
             --tree {input.tree} \
             --ancestral-sequences {input.node_data} \
             --reference-sequence {input.reference} \
-            --output {output.node_data}
+            --output {output.node_data} \
+            2>&1 | tee {log}
         """

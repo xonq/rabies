@@ -18,6 +18,10 @@ rule export:
         description = config["files"]["description"]
     output:
         auspice_json = "auspice/rabies.json"
+    log:
+        "logs/export.txt",
+    benchmark:
+        "benchmarks/export.txt"
     params:
         strain_id = config["strain_id_field"],
     shell:
@@ -31,5 +35,6 @@ rule export:
             --auspice-config {input.auspice_config} \
             --include-root-sequence-inline \
             --output {output.auspice_json} \
-            --description {input.description}
+            --description {input.description} \
+            2>&1 | tee {log}
         """

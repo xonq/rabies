@@ -45,6 +45,10 @@ rule filter:
         exclude = config["files"]["exclude"],
     output:
         sequences = "results/filtered.fasta"
+    log:
+        "logs/filter.txt",
+    benchmark:
+        "benchmarks/filter.txt"
     params:
         group_by = config["filter"]["group_by"],
         sequences_per_group = config["filter"]["sequences_per_group"],
@@ -62,7 +66,8 @@ rule filter:
             --group-by {params.group_by} \
             --sequences-per-group {params.sequences_per_group} \
             --min-date {params.min_date} \
-            --min-length {params.min_length}
+            --min-length {params.min_length} \
+            2>&1 | tee {log}
         """
 
 rule align:
@@ -75,6 +80,10 @@ rule align:
         reference = config["files"]["reference"]
     output:
         alignment = "results/aligned.fasta"
+    log:
+        "logs/align.txt",
+    benchmark:
+        "benchmarks/align.txt"
     shell:
         """
         augur align \
@@ -82,5 +91,6 @@ rule align:
             --reference-sequence {input.reference} \
             --output {output.alignment} \
             --fill-gaps \
-            --remove-reference
+            --remove-reference \
+            2>&1 | tee {log}
         """

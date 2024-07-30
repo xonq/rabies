@@ -10,11 +10,16 @@ rule tree:
         alignment = "results/aligned.fasta"
     output:
         tree = "results/tree_raw.nwk"
+    log:
+        "logs/tree.txt",
+    benchmark:
+        "benchmarks/tree.txt"
     shell:
         """
         augur tree \
             --alignment {input.alignment} \
-            --output {output.tree}
+            --output {output.tree} \
+            2>&1 | tee {log}
         """
 
 rule refine:
@@ -29,6 +34,10 @@ rule refine:
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json"
+    log:
+        "logs/refine.txt",
+    benchmark:
+        "benchmarks/refine.txt"
     params:
         strain_id = config["strain_id_field"]
     shell:
@@ -40,5 +49,6 @@ rule refine:
             --metadata-id-columns {params.strain_id} \
             --output-tree {output.tree} \
             --output-node-data {output.node_data} \
-            --root mid_point
+            --root mid_point \
+            2>&1 | tee {log}
         """
