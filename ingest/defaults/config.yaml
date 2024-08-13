@@ -23,6 +23,7 @@ ncbi_datasets_fields:
   - update-date
   - length
   - host-name
+  - host-tax-id
   - isolate-lineage-source
   - biosample-acc
   - submitter-names
