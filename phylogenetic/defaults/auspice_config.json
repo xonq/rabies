@@ -31,6 +31,16 @@
       "key": "host",
       "title": "Host",
       "type": "categorical"
+    },
+    {
+      "key": "host_latin_name",
+      "title": "Host latin name",
+      "type": "categorical"
+    },
+    {
+      "key": "host_common_name",
+      "title": "Host common name",
+      "type": "categorical"
     }
   ],
   "geo_resolutions": [

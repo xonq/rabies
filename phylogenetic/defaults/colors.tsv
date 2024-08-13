@@ -5,3 +5,16 @@ region	Africa	#8ABB6A
 region	Europe	#BEBB48
 region	South America	#E29E39
 region	North America	#E2562B
+#
+# Host taxa
+host	Bat	#3F47C9
+host	Domestic Dog	#4274CE
+host	Fox (Vulpes sp.)	#4F97BB
+host	Raccoon	#64AC99
+host	Skunk	#7EB976
+host	Other Carnivore	#9EBE5A
+host	Cattle	#BEBB48
+host	Other Ungulate	#D9AE3E
+host	Human	#E69036
+host	Other Mammal	#E35F2D
+host	Bird	#DB2823
