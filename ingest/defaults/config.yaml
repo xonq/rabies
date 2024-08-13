@@ -54,12 +54,18 @@ curate:
     release-date: date_released
     update-date: date_updated
     length: length
-    host-name: host
+    host-name: host_latin_name
+    host-tax-id: host_tax_id
     isolate-lineage-source: sample_type
     biosample-acc: biosample_accessions
     submitter-names: authors
     submitter-affiliation: institution
     submitter-country: submitter_country
+    Group name: host_group
+    Curator common name: host_common_name
+    Family name: host_family
+    Genus name: host_genus
+
   # Standardized strain name regex
   # Currently accepts any characters because we do not have a clear standard for strain names across pathogens
   strain_regex: "^.+$"
@@ -110,6 +116,11 @@ curate:
     "location",
     "length",
     "host",
+    "host_latin_name",
+    "host_family",
+    "host_genus",
+    "host_group",
+    "host_common_name",
     "date_released",
     "date_updated",
     "sra_accessions",
