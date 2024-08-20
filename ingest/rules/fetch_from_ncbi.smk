@@ -95,6 +95,67 @@ rule format_ncbi_dataset_report:
             > {output.ncbi_dataset_tsv}
         """
 
+rule extract_ncbi_dataset_hosttaxid:
+    input:
+        ncbi_dataset_tsv="data/ncbi_dataset_report.tsv",
+    output:
+        ncbi_dataset_hosttaxid="data/ncbi_dataset_hosttaxid.tsv",
+    log:
+        "logs/extract_ncbi_dataset_hosttaxid.txt",
+    benchmark:
+        "benchmarks/extract_ncbi_dataset_hosttaxid.txt"
+    shell:
+        """
+        tsv-select {input.ncbi_dataset_tsv} -H -f 'host\-tax\-id' | \
+        tsv-filter --is-numeric 1 | \
+        tsv-uniq \
+        2> {log} > {output.ncbi_dataset_hosttaxid}
+        """
+
+rule get_ncbi_hosttax_info:
+    input:
+        ncbi_dataset_hosttaxid="data/ncbi_dataset_hosttaxid.tsv",
+    output:
+        ncbi_hosttax_info="data/hosttax_info.zip",
+    # Allow retries in case of network errors
+    retries: 5
+    log:
+        "logs/get_ncbi_hosttax_info.txt",
+    benchmark:
+        "benchmarks/get_ncbi_hosttax_info.txt"
+    shell:
+        """
+        datasets download taxonomy taxon \
+        --inputfile {input.ncbi_dataset_hosttaxid} \
+        --filename {output.ncbi_hosttax_info} \
+        2>&1 | tee {log}
+        """
+
+rule join_metadata_and_hostinfo:
+    input:
+        ncbi_hosttax_info="data/hosttax_info.zip",
+        ncbi_dataset_tsv="data/ncbi_dataset_report.tsv",
+    output:
+        metadata = "data/metadata_with_taxinfo.tsv",
+    log:
+        "logs/join_metadata_and_hostinfo.txt",
+    benchmark:
+        "benchmarks/join_metadata_and_hostinfo.txt"
+    params:
+        ncbi_hosttax_columns = "Query,'Group\ name','Curator\ common\ name','Family\ name','Genus\ name'"
+    shell:
+        """
+        unzip -p {input.ncbi_hosttax_info} ncbi_dataset/data/taxonomy_summary.tsv \
+        | tsv-select -H -f {params.ncbi_hosttax_columns} \
+        | tsv-join -H \
+        --filter-file - \
+        --key-fields Query \
+        --data-fields 'host\-tax\-id' \
+        --append-fields '*' \
+        --write-all ? \
+        {input.ncbi_dataset_tsv} \
+        2> {log} > {output.metadata}
+        """
 
 # Technically you can bypass this step and directly provide FASTA and TSV files
 # as input files for the curate pipeline.
@@ -103,7 +164,7 @@ rule format_ncbi_dataset_report:
 rule format_ncbi_datasets_ndjson:
     input:
         ncbi_dataset_sequences="data/ncbi_dataset_sequences.fasta",
-        ncbi_dataset_tsv="data/ncbi_dataset_report.tsv",
+        ncbi_dataset_tsv="data/metadata_with_taxinfo.tsv",
     output:
         ndjson="data/ncbi.ndjson",
     log:

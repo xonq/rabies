@@ -107,6 +107,9 @@ rule curate:
                 --abbr-authors-field {params.abbr_authors_field} \
             | augur curate apply-geolocation-rules \
                 --geolocation-rules {input.all_geolocation_rules} \
+            | scripts/add-host-categories.py \
+            --latin-field host_latin_name --family-field host_family \
+            --genus-field host_genus --group-field host_group  \
             | augur curate apply-record-annotations \
                 --annotations {input.annotations} \
                 --id-field {params.annotations_id} \
