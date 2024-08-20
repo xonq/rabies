@@ -49,7 +49,7 @@
   ],
   "display_defaults": {
     "map_triplicate": true,
-    "color_by": "region"
+    "color_by": "host"
   },
   "filters": [
     "region",
