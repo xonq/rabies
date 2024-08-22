@@ -51,3 +51,18 @@ rule translate:
             --output {output.node_data} \
             2>&1 | tee {log}
         """
+
+rule add_year_metadata:
+    input:
+        metadata = "data/metadata.tsv",
+    params:
+        strain_id = config["strain_id_field"],
+    output:
+        node_data = "results/year.json"
+    run:
+        from augur.io import read_metadata
+        import json
+        m = read_metadata(input.metadata, id_columns=[params.strain_id])
+        nodes = {name: {'year': date.split('-')[0]} for name,date in zip(m.index, m['date']) if date and not date.startswith('X')}
+        with open(output.node_data, 'w') as fh:
+            json.dump({"nodes": nodes}, fh)
