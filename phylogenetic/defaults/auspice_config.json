@@ -28,6 +28,11 @@
       "type": "categorical"
     },
     {
+      "key": "year",
+      "title": "Sampling year",
+      "type": "continuous"
+    },
+    {
       "key": "host",
       "title": "Host",
       "type": "categorical"
@@ -60,6 +65,7 @@
     "author",
     "strain",
     "division",
-    "location"
+    "location",
+    "date"
   ]
 }
