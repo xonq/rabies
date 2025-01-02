@@ -12,6 +12,10 @@ We curate sequence data and metadata from NCBI as starting point for our analyse
 - [data.nextstrain.org/files/workflows/rabies/sequences.fasta.zst](https://data.nextstrain.org/files/workflows/rabies/sequences.fasta.zst)
 - [data.nextstrain.org/files/workflows/rabies/metadata.tsv.zst](https://data.nextstrain.org/files/workflows/rabies/metadata.tsv.zst)
 
+#### Clade annotation
+
+Clades are defined based on the "major clades" in [Troupin et al. 2016](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1006041).
+
 ---
 
 Screenshots may be used under a [CC-BY-4.0 license](https://creativecommons.org/licenses/by/4.0/) and attribution to nextstrain.org must be provided.
