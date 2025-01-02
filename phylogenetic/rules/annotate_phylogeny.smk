@@ -52,6 +52,23 @@ rule translate:
             2>&1 | tee {log}
         """
 
+rule clades:
+    input:
+        tree = "results/tree.nwk",
+        nt_muts = "results/nt_muts.json",
+        aa_muts = "results/aa_muts.json",
+        clade_defs = config["files"]["clades"]
+    output:
+        clades = "results/clades.json"
+    shell:
+        """
+        augur clades \
+            --tree {input.tree} \
+            --mutations {input.nt_muts} {input.aa_muts} \
+            --clades {input.clade_defs} \
+            --output {output.clades}
+        """
+
 rule add_year_metadata:
     input:
         metadata = "data/metadata.tsv",
