@@ -15,6 +15,7 @@ rule export:
         aa_muts = "results/aa_muts.json",
         year = "results/year.json",
         colors = config["files"]["colors"],
+        lat_longs = config["files"]["lat_longs"],
         auspice_config = config["files"]["auspice_config"],
         description = config["files"]["description"]
     output:
@@ -33,6 +34,7 @@ rule export:
             --metadata-id-columns {params.strain_id} \
             --node-data {input.branch_lengths} {input.nt_muts} {input.aa_muts} {input.year} \
             --colors {input.colors} \
+            --lat-longs {input.lat_longs} \
             --auspice-config {input.auspice_config} \
             --include-root-sequence-inline \
             --output {output.auspice_json} \
