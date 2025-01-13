@@ -13,6 +13,7 @@ rule export:
         branch_lengths = "results/branch_lengths.json",
         nt_muts = "results/nt_muts.json",
         aa_muts = "results/aa_muts.json",
+        clades = "results/clades.json",
         year = "results/year.json",
         colors = config["files"]["colors"],
         auspice_config = config["files"]["auspice_config"],
@@ -31,7 +32,7 @@ rule export:
             --tree {input.tree} \
             --metadata {input.metadata} \
             --metadata-id-columns {params.strain_id} \
-            --node-data {input.branch_lengths} {input.nt_muts} {input.aa_muts} {input.year} \
+            --node-data {input.branch_lengths} {input.nt_muts} {input.aa_muts} {input.year} {input.clades} \
             --colors {input.colors} \
             --auspice-config {input.auspice_config} \
             --include-root-sequence-inline \

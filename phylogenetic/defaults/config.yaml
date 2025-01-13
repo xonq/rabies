@@ -5,6 +5,7 @@ files:
     colors: "defaults/colors.tsv"
     auspice_config: "defaults/auspice_config.json"
     description: "defaults/description.md"
+    clades: "defaults/clades.tsv"
 filter:
     group_by: "country year"
     sequences_per_group: 20

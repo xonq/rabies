@@ -46,6 +46,11 @@
       "key": "host_common_name",
       "title": "Host common name",
       "type": "categorical"
+    },
+    {
+      "key": "clade_membership",
+      "title": "Clade",
+      "type": "categorical"
     }
   ],
   "geo_resolutions": [
