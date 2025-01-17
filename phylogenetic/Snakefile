@@ -18,7 +18,7 @@ rule all:
     input:
         # Fill in path(s) to the final exported Auspice JSON(s)
         auspice_json="auspice/rabies.json",
-
+        tip_frequencies_json="auspice/rabies_tip-frequencies.json",
 
 # These rules are imported in the order that they are expected to run.
 # Each Snakefile will have documented inputs and outputs that should be kept as
