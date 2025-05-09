@@ -70,11 +70,6 @@
       "title": "Minor Lineage",
       "type": "categorical"
     },
-    {
-      "key": "bootstrap",
-      "title": "Ultrafast Bootstrap Support",
-      "type": "continuous"
-    }
   ],
   "geo_resolutions": [
     "country",
