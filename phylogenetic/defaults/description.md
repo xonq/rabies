@@ -14,7 +14,7 @@ We curate sequence data and metadata from NCBI as starting point for our analyse
 
 #### Clade annotation
 
-Clades are defined based on the "major clades" in [Troupin et al. 2016](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1006041).
+Clades are defined based on the "clades", "subclades", and "lineages" classified in [Campbell et al. 2022](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1010023), which draws from the classifications of [Troupin et al. 2016](https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1006041).
 
 ---
 
