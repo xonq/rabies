@@ -2,7 +2,10 @@
   "title": "Real-time tracking of rabies full genome virus evolution",
   "maintainers": [
     {"name": "Kim Andrews", "url": "https://bedford.io/team/kim-andrews/"},
-    {"name": "the Nextstrain team", "url": "https://nextstrain.org/team"}
+    {"name": "the Nextstrain team", "url": "https://nextstrain.org/team"},
+    {"name": "Zachary Konkel", "url": "https://linkedin.com/in/konkelzach"},
+    {"name": "Theiagen Genomics", "url": "https://theiagen.com"}
+
   ],
   "data_provenance": [
     {
@@ -10,7 +13,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/genbank/"
     }
   ],
-  "build_url": "https://github.com/nextstrain/rabies",
+  "build_url": "https://github.com/xonq/rabies",
   "colorings": [
     {
       "key": "gt",
@@ -48,9 +51,29 @@
       "type": "categorical"
     },
     {
-      "key": "clade_membership",
+      "key": "clade",
       "title": "Clade",
       "type": "categorical"
+    },
+    {
+      "key": "subclade",
+      "title": "Subclade",
+      "type": "categorical"
+    },
+    {
+      "key": "major_lineage",
+      "title": "Major Lineage",
+      "type": "categorical"
+    },
+    {
+      "key": "minor_lineage",
+      "title": "Minor Lineage",
+      "type": "categorical"
+    },
+    {
+      "key": "bootstrap",
+      "title": "Ultrafast Bootstrap Support",
+      "type": "continuous"
     }
   ],
   "geo_resolutions": [
