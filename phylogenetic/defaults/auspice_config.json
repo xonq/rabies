@@ -49,27 +49,7 @@
       "key": "host_common_name",
       "title": "Host common name",
       "type": "categorical"
-    },
-    {
-      "key": "clade",
-      "title": "Clade",
-      "type": "categorical"
-    },
-    {
-      "key": "subclade",
-      "title": "Subclade",
-      "type": "categorical"
-    },
-    {
-      "key": "major_lineage",
-      "title": "Major Lineage",
-      "type": "categorical"
-    },
-    {
-      "key": "minor_lineage",
-      "title": "Minor Lineage",
-      "type": "categorical"
-    },
+    }
   ],
   "geo_resolutions": [
     "country",
