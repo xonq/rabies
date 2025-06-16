@@ -3,7 +3,6 @@
   "maintainers": [
     {"name": "Kim Andrews", "url": "https://bedford.io/team/kim-andrews/"},
     {"name": "the Nextstrain team", "url": "https://nextstrain.org/team"},
-    {"name": "Zachary Konkel", "url": "https://linkedin.com/in/konkelzach"},
     {"name": "Theiagen Genomics", "url": "https://theiagen.com"}
 
   ],
@@ -13,7 +12,7 @@
       "url": "https://www.ncbi.nlm.nih.gov/genbank/"
     }
   ],
-  "build_url": "https://github.com/xonq/rabies",
+  "build_url": "https://github.com/theiagen/rabies",
   "colorings": [
     {
       "key": "gt",
