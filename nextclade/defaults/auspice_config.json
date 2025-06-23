@@ -1,0 +1,84 @@
+{
+  "title": "Real-time tracking of rabies full genome virus evolution",
+  "maintainers": [
+    {"name": "Kim Andrews", "url": "https://bedford.io/team/kim-andrews/"},
+    {"name": "the Nextstrain team", "url": "https://nextstrain.org/team"},
+    {"name": "Theiagen Genomics", "url": "https://theiagen.com"}
+
+  ],
+  "data_provenance": [
+    {
+      "name": "GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/"
+    }
+  ],
+  "build_url": "https://github.com/theiagen/rabies",
+  "colorings": [
+    {
+      "key": "gt",
+      "title": "Genotype",
+      "type": "categorical"
+    },
+    {
+      "key": "region",
+      "title": "Region",
+      "type": "categorical"
+    },
+    {
+      "key": "location",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "collection_year",
+      "title": "Sampling year",
+      "type": "continuous"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    },
+    {
+      "key": "host_latin_name",
+      "title": "Host latin name",
+      "type": "categorical"
+    },
+    {
+      "key": "host_common_name",
+      "title": "Host common name",
+      "type": "categorical"
+    },
+    {
+      "key": "submitters",
+      "title": "Submitters",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country",
+    "region"
+  ],
+  "display_defaults": {
+    "map_triplicate": true,
+    "color_by": "host"
+  },
+  "filters": [
+    "region",
+    "country",
+    "author"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy",
+    "frequencies"
+  ],
+  "metadata_columns": [
+    "author",
+    "strain",
+    "division",
+    "location",
+    "date"
+  ]
+}
