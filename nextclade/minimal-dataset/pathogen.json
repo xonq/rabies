@@ -15,13 +15,10 @@
     "reference accession": "NC_001542.1"
   },
   "qc": {
-    "frameShifts": {
-      "enabled": true
-    },
     "missingData": {
       "enabled": true,
-      "missingDataThreshold": 3000,
-      "scoreBias": 100
+      "missingDataThreshold": 6000,
+      "scoreBias": 1200
     },
     "mixedSites": {
       "enabled": true,
