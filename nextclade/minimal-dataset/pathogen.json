@@ -23,9 +23,6 @@
     "mixedSites": {
       "enabled": true,
       "mixedSitesThreshold": 100
-    },
-    "stopCodons": {
-      "enabled": true
     }
   }
 }
