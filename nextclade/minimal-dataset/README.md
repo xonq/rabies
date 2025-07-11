@@ -20,6 +20,77 @@ dataformat tsv virus-genome \
   --fields accession,geo-region,host-common-name,submitter-names,isolate-collection-date
 ```
 
+## Included clades
+
+The following clades were incorporated into this dataset, except when conflicts were identified:
+
+| Clade | Subclade | Exclusion Criteria |
+|-------|----------|-------------------|
+| Africa-2 | - | - |
+| Africa-3 | - | - |
+| Arctic | - | - |
+| Arctic | A | - |
+| Arctic | AL1a | - |
+| Arctic | AL1b | - |
+| Arctic | AL2 | - |
+| Arctic | AL3 | Mutations are not unique |
+| Asian | - | - |
+| Asian | SEA1a | - |
+| Asian | SEA1b | - |
+| Asian | SEA2a | - |
+| Asian | SEA2b | - |
+| Asian | SEA3 | - |
+| Asian | SEA4 | - |
+| Asian | SEA5 | - |
+| Bats | - | - |
+| Bats | AP | Mutations are not unique |
+| Bats | DR | - |
+| Bats | EF-E1 | Mutations are not unique |
+| Bats | EF-E2 | Mutations are not unique |
+| Bats | EF-W1 | - |
+| Bats | EF-W2 | - |
+| Bats | LB1 | Mutations are not unique |
+| Bats | LB2 | Mutations are not unique |
+| Bats | LC | Mutations are not unique |
+| Bats | LI | - |
+| Bats | LN | Mutations are not unique |
+| Bats | LS | Mutations are not unique |
+| Bats | LX | Mutations are not unique |
+| Bats | MYsp | - |
+| Bats | MYu | Mutations are not unique |
+| Bats | PH | Not monophyletic |
+| Bats | PS | - |
+| Bats | TB1 | - |
+| Bats | TB2 | - |
+| Cosmopolitan | - | - |
+| Cosmopolitan | AF1a | - |
+| Cosmopolitan | AF1b | - |
+| Cosmopolitan | AF1c | - |
+| Cosmopolitan | AF4 | - |
+| Cosmopolitan | AM1 | - |
+| Cosmopolitan | AM2a | - |
+| Cosmopolitan | AM2b | - |
+| Cosmopolitan | AM3a | - |
+| Cosmopolitan | AM3b | - |
+| Cosmopolitan | AM4 | - |
+| Cosmopolitan | CA1 | - |
+| Cosmopolitan | CA2 | - |
+| Cosmopolitan | CA3 | - |
+| Cosmopolitan | CE | - |
+| Cosmopolitan | EE | - |
+| Cosmopolitan | ME1a | - |
+| Cosmopolitan | ME1b | - |
+| Cosmopolitan | ME2 | - |
+| Cosmopolitan | NEE | - |
+| Cosmopolitan | Vac | - |
+| Cosmopolitan | Vac2 | Mutations are not unique |
+| Cosmopolitan | WE | - |
+| Cosmopolitan | YUGCOW | Mutations are not unique |
+| Cosmopolitan | YUGFOX | Mutations are not unique |
+| Indian-Sub | - | - |
+| RAC-SK | - | - |
+
+
 # Phylogenetic tree reconstruction
 
 The tree was generated from the multifasta containing the sequences depicted above using the following commands:
