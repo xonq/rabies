@@ -1,5 +1,5 @@
 {
-  "title": "Real-time tracking of rabies full genome virus evolution",
+  "title": "Full genome-derived genotyping of Lyssavirus rabies",
   "maintainers": [
     {"name": "Theiagen Genomics", "url": "https://theiagen.com"}
   ],
@@ -32,28 +32,27 @@
       "type": "continuous"
     },
     {
-      "key": "host",
-      "title": "Host",
-      "type": "categorical"
-    },
-    {
       "key": "host_latin_name",
       "title": "Host latin name",
-      "type": "categorical"
-    },
-    {
-      "key": "host_common_name",
-      "title": "Host common name",
       "type": "categorical"
     },
     {
       "key": "submitters",
       "title": "Submitters",
       "type": "categorical"
+    },
+    {
+      "key": "Major_clade",
+      "title": "Major Clade (RABV-GLUE metadata)",
+      "type": "categorical"
+    },
+    {
+      "key": "full_minor",
+      "title": "Minor Clade (RABV-GLUE metadata)",
+      "type": "categorical"
     }
   ],
   "geo_resolutions": [
-    "country",
     "region"
   ],
   "display_defaults": {
@@ -62,8 +61,7 @@
   },
   "filters": [
     "region",
-    "country",
-    "author"
+    "submitters"
   ],
   "panels": [
     "tree",
@@ -73,9 +71,6 @@
   ],
   "metadata_columns": [
     "author",
-    "strain",
-    "division",
-    "location",
-    "date"
+    "location"
   ]
 }
