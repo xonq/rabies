@@ -20,7 +20,7 @@ dataformat tsv virus-genome \
   --fields accession,geo-region,host-common-name,submitter-names,isolate-collection-date
 ```
 
-## Included clades
+# Included clades
 
 Clades were incorporated into this dataset referencing RABV-GLUE metadata (referenced 2025/06/01). Samples were classified as a particular clade if they were directly referenced within the metadata, or if they were descendants of the most-recent common ancestor of a monophyletic clade of classified tips. The following are the accounted clades, except where exclusion criteria are noted:
 
