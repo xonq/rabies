@@ -8,7 +8,7 @@ The phylogenetic tree was generated from all complete *Lyssavirus rabies* genome
 
 # Metadata acquisition
 
-Clade classification metadata was acquired from [RABV-GLUE's metadata](https://github.com/giffordlabcvr/RABV-GLUE/blob/master/tabular/reference-set-data.tsv). We conservatively defined clades as all tips descending from a most-recent common ancestor (MRCA) of tips with classification metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed.  
+Clade classification metadata was acquired from [RABV-GLUE's metadata](https://github.com/giffordlabcvr/RABV-GLUE/blob/master/tabular/reference-set-data.tsv) (referenced [2025/06/01](https://github.com/giffordlabcvr/RABV-GLUE/blob/357613e78c397e10499e77bbd6f2b5aeeb9d10e6/tabular/reference-set-data.tsv#L4)). We conservatively defined clades as all tips descending from a most-recent common ancestor (MRCA) of tips with classification metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed.  
 
 Sample, submitter, location, and host metadata was acquired using the following `datasets` command:
 
@@ -22,7 +22,7 @@ dataformat tsv virus-genome \
 
 # Included clades
 
-Clades were incorporated into this dataset referencing RABV-GLUE metadata (referenced 2025/06/01). Samples were classified as a particular clade if they were directly referenced within the metadata, or if they were descendants of the most-recent common ancestor of a monophyletic clade of classified tips. The following are the accounted clades, except where exclusion criteria are noted:
+Accessions were assigned particular clade if the accession was directly classified within the metadata, or if the accession is a descendant of the most-recent common ancestor of a monophyletic clade of classified accessions. The following are the accounted clades, except where exclusion criteria are noted:
 
 | Clade | Subclade | Exclusion Criteria |
 |-------|----------|-------------------|
@@ -33,7 +33,7 @@ Clades were incorporated into this dataset referencing RABV-GLUE metadata (refer
 | Arctic | AL1a | - |
 | Arctic | AL1b | - |
 | Arctic | AL2 | - |
-| Arctic | AL3 | Mutations are not unique |
+| Arctic | <s>AL3</s> | Mutations are not unique |
 | Asian | - | - |
 | Asian | SEA1a | - |
 | Asian | SEA1b | - |
@@ -43,22 +43,22 @@ Clades were incorporated into this dataset referencing RABV-GLUE metadata (refer
 | Asian | SEA4 | - |
 | Asian | SEA5 | - |
 | Bats | - | - |
-| Bats | AP | Mutations are not unique |
+| Bats | <s>AP</s> | Mutations are not unique |
 | Bats | DR | - |
-| Bats | EF-E1 | Mutations are not unique |
-| Bats | EF-E2 | Mutations are not unique |
+| Bats | <s>EF-E1</s> | Mutations are not unique |
+| Bats | <s>EF-E2</s> | Mutations are not unique |
 | Bats | EF-W1 | - |
 | Bats | EF-W2 | - |
-| Bats | LB1 | Mutations are not unique |
-| Bats | LB2 | Mutations are not unique |
-| Bats | LC | Mutations are not unique |
+| Bats | <s>LB1</s> | Mutations are not unique |
+| Bats | <s>LB2</s> | Mutations are not unique |
+| Bats | <s>LC</s> | Mutations are not unique |
 | Bats | LI | - |
-| Bats | LN | Mutations are not unique |
-| Bats | LS | Mutations are not unique |
-| Bats | LX | Mutations are not unique |
+| Bats | <s>LN</s> | Mutations are not unique |
+| Bats | <s>LS</s> | Mutations are not unique |
+| Bats | <s>LX</s> | Mutations are not unique |
 | Bats | MYsp | - |
-| Bats | MYu | Mutations are not unique |
-| Bats | PH | Not monophyletic |
+| Bats | <s>MYu</s> | Mutations are not unique |
+| Bats | <s>PH</s> | Not monophyletic |
 | Bats | PS | - |
 | Bats | TB1 | - |
 | Bats | TB2 | - |
@@ -83,10 +83,10 @@ Clades were incorporated into this dataset referencing RABV-GLUE metadata (refer
 | Cosmopolitan | ME2 | - |
 | Cosmopolitan | NEE | - |
 | Cosmopolitan | Vac | - |
-| Cosmopolitan | Vac2 | Mutations are not unique |
+| Cosmopolitan | <s>Vac2</s> | Mutations are not unique |
 | Cosmopolitan | WE | - |
-| Cosmopolitan | YUGCOW | Mutations are not unique |
-| Cosmopolitan | YUGFOX | Mutations are not unique |
+| Cosmopolitan | <s>YUGCOW</s> | Mutations are not unique |
+| Cosmopolitan | <s>YUGFOX</s> | Mutations are not unique |
 | Indian-Sub | - | - |
 | RAC-SK | - | - |
 
