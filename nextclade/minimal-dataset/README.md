@@ -22,7 +22,7 @@ dataformat tsv virus-genome \
 
 # Included clades
 
-Accessions were assigned particular clade if the accession was directly classified within the metadata, or if the accession is a descendant of the most-recent common ancestor of a monophyletic clade of classified accessions. The following are the accounted clades, except where exclusion criteria are noted:
+Accessions were assigned to a particular clade if the accession was directly classified within the metadata, or if the accession is a descendant of the most-recent common ancestor of a monophyletic clade of classified accessions. The following are the accounted clades, except where exclusion criteria are noted:
 
 | Clade | Subclade | Exclusion Criteria |
 |-------|----------|-------------------|
