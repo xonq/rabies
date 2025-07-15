@@ -8,9 +8,7 @@ The phylogenetic tree was generated from all complete *Lyssavirus rabies* genome
 
 # Metadata acquisition
 
-Clade classification metadata was acquired from [RABV-GLUE's metadata](https://github.com/giffordlabcvr/RABV-GLUE/blob/master/tabular/reference-set-data.tsv) (referenced [2025/06/01](https://github.com/giffordlabcvr/RABV-GLUE/blob/357613e78c397e10499e77bbd6f2b5aeeb9d10e6/tabular/reference-set-data.tsv#L4)). We conservatively defined clades as all tips descending from a most-recent common ancestor (MRCA) of tips with classification metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed.  
-
-Sample, submitter, location, and host metadata was acquired using the following `datasets` command:
+Clade classification metadata was acquired from [RABV-GLUE's metadata](https://github.com/giffordlabcvr/RABV-GLUE/blob/master/tabular/reference-set-data.tsv) (referenced [2025/06/01](https://github.com/giffordlabcvr/RABV-GLUE/blob/357613e78c397e10499e77bbd6f2b5aeeb9d10e6/tabular/reference-set-data.tsv#L4)). Sample, submitter, location, and host metadata was acquired using the following `datasets` command:
 
 ```bash
 datasets summary virus genome accession \
@@ -22,7 +20,7 @@ dataformat tsv virus-genome \
 
 # Included clades
 
-Accessions were assigned to a particular clade if the accession was directly classified within the metadata, or if the accession is a descendant of the most-recent common ancestor of a monophyletic clade of classified accessions. The following are the accounted clades, except where exclusion criteria are noted:
+We conservatively defined clades as all tips descending from a most-recent common ancestor (MRCA) of accessions classified within the metadata. Subclades that were not monophyletic or did not contain uniquely defining mutations were removed. The following are the accounted clades, except where exclusion criteria are noted:
 
 | Clade | Subclade | Exclusion Criteria |
 |-------|----------|-------------------|
